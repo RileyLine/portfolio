@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Jura&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: "Jura", sans-serif;
+}
+
+body {
+	display: grid;
+	width: 100vw;
+	height: 100vh;
+	place-content: center;
+	background-color: #eeeeee;
+	
+	position: relative;
+}
+
+#settingsBtn {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: #303030;
+	font-size: 36pt;
+	cursor: pointer;
+}
+
+.settingsPanel {
+	background-color: #aaa;
+	width: 250px;
+	border: 1px solid #303030;
+	border-left: none;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+
+	position:absolute;
+	top: 66px;
+	left: 0px;
+	padding: 7px;
+	z-index: 10;
+}
+
+fieldset {
+	width: 100%;
+	padding: 0 10px;
+	margin-bottom: 5px;
+}
+
+legend {
+	padding: 0 5px;
+}
+
+.settingsPanel h2 {
+	margin: 20px 0 10px 0;
+	font-size: 16pt;
+}
+
+#close {
+	background-color: #999;
+	border: 1px solid #555;
+	color: #ccc;
+	font-size: 10pt;
+	padding: 0px 4px 1px 4px;
+	user-select: none;
+	cursor: pointer;
+
+	position: absolute;
+	top: 6px;
+	right: 6px;
+}
+
+#close:hover {
+	background-color: #888;
+}
+
+#close:active {
+	background-color: #777;
+	border: 1px inset #777;
+}
+
+.optionHolder {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	margin: 10px 0;
+}
+
+label {
+	color: #555;
+	font-weight: bolder;
+	font-size: 10pt;
+}
+
+input {
+	width: 100px;
+	height: 25px;
+}
+
+.formatSwitchHolder {
+	display: flex;
+	align-items: center;
+}
+
+.formatSwitchHolder p {
+	font-size: 12pt;
+	padding-bottom: 3px;
+}
+
+#format12hr {
+	padding-right: 4px;
+}
+#format24hr {
+	padding-left: 4px;
+}
+
+.formatSwitch {
+	width: 55px;
+	height: 25px;
+	border-radius: 25px;
+	background-color: #bbb;
+	position:relative;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.formatSwitchBall {
+	position: absolute;
+	top: 3px;
+	left: 3px;
+
+	height: 20px;
+	width: 20px;
+	border-radius: 15px;
+	background-color: #888;
+	cursor: pointer;
+}
+
+#applyBtn {
+	padding: 3px 10px 6px 10px;
+	cursor: pointer;
+	font-weight: bolder;
+	background-color: #999;
+	outline: none;
+	border: 1px solid #555;
+	border-radius: 5px;
+	margin-top: 8px;
+}
+
+#applyBtn:hover {
+	background-color: #888;
+}
+
+#applyBtn:active {
+	background-color: #777;
+	border: 1px inset #777;
+}
+
+#timeText {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+	font-size: 6rem;
+	z-index: 2;
+	visibility: hidden;
+	user-select: none;
+	
+	color: white;
+
+	font-family: 'jura', sans-serif;
+	white-space: nowrap;
+}
+
+span {
+	font-size: 4rem;
+}
