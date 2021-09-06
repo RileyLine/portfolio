@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<title>Highspeed Highway Scene</title>
+</head>
+<body>
+	<div id="back">
+		<i class="fas fa-arrow-alt-circle-left"></i>
+	</div>
+	<svg id="painting" viewbox="0,0,1920,1440">
+
+		<!-- Background -->
+		<rect id="bg" x="0" y="0" class="fullWidth"></rect>
+
+		<!-- Sun -->
+		<g id="wholeSun">
+			<circle id="sun" cx="0" cy="750" r="60"></circle>
+
+			<g id="sunRays">
+				<line id="leftRay" class="sunRay" x1="-70" x2="-120" y1="750" y2="750" ></line>
+				<line id="rightRay" class="sunRay" x1="70" x2="120" y1="750" y2="750" ></line>
+				<line id="bottomRay" class="sunRay" x1="0" x2="0" y1="820" y2="870" ></line>
+				<line id="topRay" class="sunRay" x1="0" x2="0" y1="680" y2="630" ></line>
+			</g>
+		</g>
+
+		<!-- Moon -->
+		<circle id="moon" cx="0" cy="750" r="60"></circle>
+
+		<!-- Grass -->
+		<rect id="frontGrass" class="fullWidth" x="0" y="580"></rect>
+
+		<!-- Airplane -->
+		<g id="outerPlane">
+			<g id="plane">
+				<polygon id="airplaneBody" points="50,105 70,105 80,122 160,122 180,145 65,145"></polygon>
+				<rect id="wings" x="115" y="97" rx="15"></rect>
+			</g>
+		</g>
+
+		<!-- Both mountains -->
+		<g id="mountains">
+			<!-- Right Mountain -->
+			<g id="grpMR">
+				<polygon id="mountainRight" points="350,100 550,620 150,620"></polygon>
+				<polygon id="snowRight" class="snow" points="350,100 428,304 385,230 378,315 355,240 330,305 320,235 270,305">
+				</polygon>
+			</g>
+			<!-- Left mountain -->
+			<g id="grpML">
+				<polygon id="mountainLeft" points="200,25 400,630 0,630"></polygon>
+				<polygon id="mountainShadow" points="200,25 0,630 -15,615"></polygon>
+				<polygon id="snowLeft" class="snow" points="200,25 274,250 230,170 225,265 195,185 175,255 172,160 128,245">
+				</polygon>
+			</g>
+		</g>
+
+		<!-- Apartment Building -->
+		<g id="apartment">
+			<rect id="apartmentWalls" x="150" y="485"></rect>
+			<polygon id="aptRoad" class="road" points="205,680 225,680 230,702 210,702" ></polygon>
+			<rect id="w1" class="buildingWindow" x="175" y="505"></rect>
+			<rect id="w2" class="buildingWindow" x="230" y="505"></rect>
+			<rect id="w3" class="buildingWindow" x="175" y="565"></rect>
+			<rect id="w4" class="buildingWindow" x="230" y="565"></rect>
+			<rect id="glassDoors" x="192" y="630"></rect>
+			<rect class="pushbar" x="207" y="642"></rect>
+			<line id="divider" x1="216" x2="216" y1="630" y2="680"></line>
+			<rect class="pushbar" x="222" y="642"></rect>
+			<polygon class="shadow" points="149,485 134,470 260,470 285,485"></polygon>
+			<polygon class="shadow" points="150,485 135,470 135,655 151,680"></polygon>
+		</g>
+		
+		<!-- Tower -->
+		<g id="tower">
+			<polygon id="square" class="road" points="320,620 490,620 530,690 350,690"></polygon>
+			<polygon id="towerWalkway" class="road" points="415,689 455,689 460,702, 420,702"></polygon>
+			<polygon id="towerShadow" points="364,675 360,665 360,645 367,642 375,630 390,628 400,615 405,390 420,500 410, 675"></polygon>
+
+			<path id="funkyTowerBase" d="M 406 457 Q 406 420 352 420 C 328 420 328 375 352 375 C 372 375 392 375 412 375 L 412 360 Q 418 360 418 352 L 424 352 L 424 270 C 424 262 436 262 436 270 L 436 352 L 442 352 Q 442 360 448 360 L 448 375 C 468 375 488 375 508 375 C 532 375 532 420 508 420 Q 454 420 454 457 L 454 592 C 454 622 454 637 484 637 Q 484 652 496 652 L 496 675 L 364 675 L 364 652 Q 376 652 376 637 C 406 637 406 622 406 592 Z"></path>
+			
+			<rect id="towerElevator" x="418" y="438" rx="15"></rect>
+			<rect id="towerElevatorShaft" x="418" y="438" rx="15"></rect>
+			<rect id="towerLight" x="424" y="264" rx="5"></rect>
+			<rect id="towerDoors" x="400" y="640"></rect>
+			<line id="divider" x1="419" x2="419" y1="640" y2="675"></line>
+			<line id="divider" x1="440" x2="440" y1="640" y2="675"></line>
+			<rect id="bandingRed" x="334" y="387" rx="10"></rect>
+			<rect id="bandingGrey" x="334" y="391" rx="5"></rect>
+		</g>
+
+		<!-- Back Road -->
+		<rect id="rearRoad" class="road fullWidth" x="0" y="700"></rect>
+
+		<!-- Main Road -->
+		<rect id="mainRoad" class="road fullWidth" x="0" y="945"></rect>
+		
+		<!-- Defs -->
+		<defs>
+			<rect id="post" y="820" ></rect>
+			<rect id="dashedMarking" y="1160"></rect>
+			<rect id="rail" x="-150"></rect>
+		</defs>
+
+		<!-- Tree -->
+		<g id="wholeTree">
+			<path id="treeTrunk" d="M 517 940 Q 643 840 589 587 Q 661 598 733 587 Q 679 840 793 939 Q 661 906 517 939 Z"></path>
+			<ellipse id="trunkHole" cx="655" cy="800" rx="25" ry="40"></ellipse>
+			<g id="treePart">
+				<ellipse id="treeBranches" cx="490" cy="600" rx="75" ry="62"></ellipse>
+				<ellipse id="treeBranches" cx="550" cy="555" rx="65" ry="60"></ellipse>
+				<ellipse id="treeBranches" cx="610" cy="510" rx="75" ry="60"></ellipse>
+				<ellipse id="treeBranches" cx="650" cy="540" rx="90" ry="60"></ellipse>
+				<ellipse id="treeBranches" cx="720" cy="600" rx="85" ry="70"></ellipse>
+				<ellipse id="treeBranches" cx="600" cy="605" rx="160" ry="70"></ellipse>
+			</g>
+			<use href="#treePart" x=100></use>
+		</g>
+
+		<!-- Bush -->
+		<g id="kushBush">
+			<ellipse id="treeBranches" cx="490" cy="650" rx="55" ry="62"></ellipse>
+			<ellipse id="treeBranches" cx="550" cy="605" rx="65" ry="60"></ellipse>
+			<ellipse id="treeBranches" cx="610" cy="550" rx="75" ry="60"></ellipse>
+			<ellipse id="treeBranches" cx="650" cy="590" rx="90" ry="60"></ellipse>
+			<ellipse id="treeBranches" cx="720" cy="650" rx="65" ry="70"></ellipse>
+			<ellipse id="treeBranches" cx="600" cy="655" rx="160" ry="70"></ellipse>
+		</g>
+
+		<!-- Dashed Lane Markings -->
+		<g id="allMarkings">
+			<use href="#dashedMarking" x="50"></use>
+			<use href="#dashedMarking" x="350"></use>
+			<use href="#dashedMarking" x="650"></use>
+			<use href="#dashedMarking" x="950"></use>
+			<use href="#dashedMarking" x="1250"></use>
+			<use href="#dashedMarking" x="1550"></use>
+			<use href="#dashedMarking" x="1850"></use>
+			<use id="lastDash" href="#dashedMarking"></use>
+		</g>
+
+		<!-- Guardrail Posts -->
+		<g id="allPosts">
+			<use href=#post x="100"></use>
+			<use href=#post x="500"></use>
+			<use href=#post x="900"></use>
+			<use href=#post x="1300"></use>
+			<use href=#post x="1700"></use>
+			<use id=lastPost href=#post></use>
+		</g>
+
+		<!-- Guardrail -->
+		<use href="#rail" y="835"></use>
+		<use href="#rail" y="850"></use>
+		<use href="#rail" y="865"></use>
+		<use href="#rail" y="880"></use>
+
+		<!-- Blur for the cars headlights @ night (I know outline said NO filters, but this totally MADE the highlights believable.) -->
+		<filter id="blur">
+			<feGaussianBlur in="SourceGraphic" stdDeviation="20" />
+		</filter>
+
+		<!-- Far car -->
+		<g id="carFar">
+			<g id="carFarBodyGrp">
+				<polygon class="carLights" filter="url(#blur)" points="765,1280 1100,1175 1085,1420"></polygon>
+				<polygon id="carFarBody" points="75,1350 75,1250 180,1250 330,1130 500,1130 670,1250 810,1265 795,1350"></polygon>
+				<polygon id="fcBackWindow" class="window" points="240,1225 335,1145 410,1145 410,1225"></polygon>
+				<polygon id="ccFrontWindow" class="window" points="425,1225 425,1145 495,1145 605,1225"></polygon>
+				<rect id="farHandle" class="handle" x="260" y="1245"></rect>
+				<rect id="farHandle" class="handle" x="440" y="1245"></rect>
+				<polygon id="cfHeadLight" class="headlight" points="810,1265 804,1300 785,1298 790,1263"></polygon>
+				<rect id="cfTailLight" class="taillight" x="75" y="1250"></rect>
+			</g>
+			<circle class="wheel" cx="250" cy="1350" r="56"></circle>
+			<circle class="wheel" cx="660" cy="1350" r="56"></circle>
+		</g>
+		
+		<!-- Close car -->
+		<g id="carClose">
+			<g id="carCloseBodyGrp">
+				<polygon class="carLights" filter="url(#blur)" points="765,1280 1100,1175 1085,1420"></polygon>
+				<polygon id="carCloseBody" points="75,1350 75,1250 180,1250 330,1130 500,1130 670,1250 810,1265 795,1350"></polygon>
+				<polygon id="ccBackWindow" class="window" points="240,1225 335,1145 410,1145 410,1225"></polygon>
+				<polygon id="ccFrontWindow" class="window" points="425,1225 425,1145 495,1145 605,1225"></polygon>
+				<rect id="closeHandle" class="handle" x="260" y="1245"></rect>
+				<rect id="closeHandle" class="handle" x="440" y="1245"></rect>
+				<polygon id="ccHeadLight" class="headlight" points="810,1265 804,1300 785,1298 790,1263"></polygon>
+				<rect id="ccTailLight" class="taillight" x="75" y="1250"></rect>
+				
+				
+			</g>
+			<circle class="wheel" cx="250" cy="1350" r="56"></circle>
+			<circle class="wheel" cx="660" cy="1350" r="56"></circle>
+		</g>
+
+	</svg>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+	<script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,350 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Orbitron:wght@400;800&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-padding-top: 50px;
+}
+
+body {
+	position: relative;
+}
+
+.hoverLogo {
+	position: absolute;
+	right: 20%;
+	top: calc(50% - 200px);
+}
+
+.hero {
+	background-image: url(../images/BG2.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	height: calc(100vh - 75px);
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+
+nav {
+	/* background-image: url(../images/patternTestFull.jpg);
+	background-size: cover;
+	background-position: center center; */
+
+	background-color: #303030;
+	height: 75px;
+	width: 100%;
+
+	position: sticky;
+	top: 0;
+	display: flex;
+	align-items: center;
+	z-index: 2;
+	box-shadow: 0px 10px 13px -7px #000000, 5px 5px 15px 5px rgba(0,0,0,0);
+}
+
+ul {
+	display: flex;
+	justify-content: space-evenly;
+	list-style: none;
+	width: 100%;
+}
+
+li {
+	font-size: 16pt;
+	text-transform: uppercase;
+	background-color: rgba(255, 0, 0, 0.562);
+	border: 2px solid #161616;
+	border-radius: 5px;
+	
+	box-shadow: 3px 4px 7px 2px rgba(0,0,0,0.5) inset;
+}
+
+nav a {
+	color: #303030;
+}
+
+a {
+	color: white;
+	text-decoration: none;
+	display: block;
+	padding:  10px 15px;
+	font-family: 'Orbitron', sans-serif;
+}
+
+nav a:hover {
+	color: white;
+}
+
+li:active {
+	box-shadow: none;
+}
+
+h1, h2, h3 {
+	font-family: 'Orbitron', sans-serif;
+	font-weight: bolder;
+}
+
+p {
+	font-family: 'Montserrat', sans-serif;
+}
+
+#intro {
+	font-size: 16pt;
+	text-align: center;
+	padding: 5px 200px 60px 200px;
+}
+
+.legends {
+	width: 100%;
+	padding: 60px 0;
+	overflow: hidden;
+}
+
+.legends h2 {
+	font-size: 24pt;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.legends p {
+	text-align: center;
+	font-size: 16pt;
+	padding: 5px 0;
+}
+
+#lastRow  {
+	margin: 150px 0 0 0;
+}
+
+.legendsRow {
+	display: flex;
+	justify-content: space-evenly;
+	align-items: center;
+	margin: 150px 0;
+}
+
+.legendEntry {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.legendEntry h3 {
+	margin-top: 15px;
+	font-size: 20pt;
+}
+
+.maps {
+	padding: 60px 0px;
+	overflow: hidden;
+	background-color: rgb(104, 163, 157);
+	background-color: #606060;
+	color: white;
+}
+
+.maps h2 {
+	font-size: 24pt;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.mapHolder {
+	display: flex;
+	margin-bottom: 150px;
+	border-top: 1px solid black;
+	border-top: 1px solid white;
+}
+
+.picHolder {
+	width: 50%;
+	font-size: 0;
+}
+
+.picHolder img {
+	width: 100%;
+	border: 1px solid black;
+	border: 1px solid white;
+	border-top: none
+}
+
+.textHolder {
+	width: 50%;
+	padding: 0 25px;
+}
+
+.textHolder h3 {
+	font-size: 18pt;
+	padding: 15px 0 10px 0;
+}
+.textHolder p {
+	text-align: justify;
+}
+
+.reverse .picHolder {
+	order: 1;
+}
+
+.reverse .textHolder h3 {
+	text-align: right;
+}
+
+.weapons {
+	padding: 60px 0;
+	overflow: hidden;
+}
+
+.weapons h2 {
+	font-size: 24pt;
+	text-align: center;
+	padding: 15px 0;
+}
+
+.weaponRow {
+	display: flex;
+	width: 80%;
+	background-color: rgba(0,0,0,0.15);
+	border: 2px solid #303030;
+	border-radius: 30px;
+	padding: 15px;
+	justify-content: space-evenly;
+	flex-wrap: wrap;
+	margin: 0 auto 60px auto;
+}
+
+.indivWep {
+	width: 160px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	margin: 5px 25px;
+}
+
+.wepPic {
+	width: 100%;
+	margin: auto 0;
+}
+
+.wepPic img {
+	width: 100%;
+}
+
+.wepInfo {
+	text-align: center;
+}
+
+
+/* Footer */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	background-color: #505050;
+}
+
+.footerTop {
+	display: flex;
+}
+
+.footerTop div {
+	padding: 15px;
+}
+
+.footerTL {
+	width: 10%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer i {
+	font-size: 24pt;
+	margin: 30px;
+	color: #f74847;
+}
+
+.footerTM {
+	width: 60%;
+	display: flex;
+	flex-direction: column;
+	border-right: 1px solid silver;
+	border-left: 1px solid silver;
+
+	justify-content: space-between;
+}
+
+.siteLinks {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.siteLinks h3 {
+	width: 100%;
+	text-align: center;
+	color: white;
+	font-size: 16pt;
+	text-decoration: underline;
+}
+
+.siteLinks p {
+	width: 50%;
+	text-align: center;
+	margin: 30px 0;
+}
+
+.siteLinks a {
+	padding: 0;
+	display: inline;
+	font-family: 'Montserrat', sans-serif;
+}
+
+.siteLinks a:hover {
+	text-decoration: underline;
+}
+
+.eaSection {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.eaSection img {
+	width: 75px;
+}
+
+.footerTR {
+	width: 30%;
+	display: flex;
+	flex-direction: column;
+
+	align-items: center;
+}
+
+.apexSection {
+	height: 250px;
+}
+
+.apexSection img {
+	height: 100%;
+}
+
+.footerBot {
+	width: 100%;
+	background-color: #161616;
+
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.footerBot p {
+	padding: 15px 0;
+	color: white;
+}

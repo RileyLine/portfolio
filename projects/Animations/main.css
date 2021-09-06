@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Gruppo&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Gruppo', cursive;
+}
+
+.container {
+	width: 100vw;
+	height: 100vh;
+	position: relative;
+	overflow: hidden;
+}
+
+.top {
+	background-color: #303030;
+	border-bottom: 2px solid white;
+	color: white;
+	user-select: none;
+	opacity: 0;
+}
+
+.bot {
+	background-color: #009B77;
+	color: #303030;
+	user-select: none;
+	opacity: 0;
+}
+
+.project {
+	display: flex;
+	width: 100vw;
+	height: 50vh;
+	justify-content: center;
+	align-items: center;
+}
+
+.iconHolder {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.IHT {
+	margin-bottom: 50px;
+}
+
+.IHB {
+	margin-top: 50px;
+}
+
+.iconHolder h2 {
+	margin-bottom: 15px;
+	font-size: 36pt;
+}
+
+.iconHolder i {
+	font-size: 36pt;
+}
+
+
+/* The selection Orb */
+.selecta {
+	position: absolute;
+	width: 200px;
+	height: 200px;
+	border-radius: 100px;
+	top: calc(50% - 100.5px);
+	left: calc(50% - 100px);
+
+	box-shadow: -10px 0px 20px -7px #000000, 10px 0px 20px -7px #000000;
+	border: 2px solid white;
+	z-index: 2;
+	opacity: 0;
+}
+
+.selecta i {
+	font-size: 24pt;
+}
+
+.selecta p {
+	padding: 5px;
+}
+
+#fat {
+	font-weight: bolder;
+}
+
+.topSelection {
+	background-color: #009B77;
+	border-radius: 100px 100px 0 0;
+	border-bottom: 2px solid white;
+	color: #303030;
+}
+
+.botSelection {
+	background-color: #303030;
+	border-radius: 0px 0px 100px 100px;
+	color: white;
+}
+
+.selection {
+	width: 100%;
+	height: 50%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	cursor: pointer;
+}

@@ -1,0 +1,514 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	overflow: hidden;
+	position: relative;
+	opacity: 0;
+}
+
+#back {
+	position: fixed;
+	top: 30px;
+	left: 36px;
+	z-index: 3;
+}
+
+#back i {
+	color: #303030;
+	font-size: 36pt;
+	cursor: pointer;
+}
+
+#back i:hover {
+	color:white;
+}
+	
+svg {
+	width: 60%;
+	height: 60%;
+	display: block;
+	margin: 35px auto;
+}
+
+.fullWidth {
+	width: 1920px;
+}
+
+/* Background */
+#bg {
+	height: 1440px;
+
+	animation: bgColors 120s linear infinite;
+}
+
+/* Road Colour */
+.road {
+	fill: #606060;
+}
+#mainRoad {
+	height: 495px;
+}
+#rearRoad {
+	height: 60px;
+}
+
+/* Plane Styles */
+#outerPlane {
+	animation: planeFlyY 48s linear infinite;
+}
+#plane {
+	animation: planeFlyX 48s linear infinite;
+}
+#airplaneBody {
+	fill: rgb(114, 124, 168);
+}
+#wings {
+	width: 15px;
+	height: 66px;
+	fill: rgb(114, 124, 168);
+	transform-origin: 120px 140px;
+	transform: rotate(-20deg);
+}
+
+/* Apartment Building*/
+#apartment {
+	animation: apartmentSlide 40s linear infinite;
+}
+#apartmentWalls {
+	width: 135px;
+	height: 195px;
+	fill: rgb(172, 166, 136);
+}
+.buildingWindow {
+	width: 30px;
+	height: 30px;
+	fill: rgba(119, 183, 209, 0.35);
+}
+/* Individual windows */
+#w1 {
+	animation: apartmentLights 23s linear infinite;
+}
+#w2 {
+	animation: apartmentLights 27s linear infinite;
+}
+#w3 {
+	animation: apartmentLights 37s linear infinite;
+}
+#w4 {
+	animation: apartmentLights 31s linear infinite;
+}
+/* Main doors for the apartment building */
+#glassDoors {
+	width: 50px;
+	height: 50px;
+	fill: rgba(96, 117, 126, 0.35);
+}
+/* Divider for the glass doors on the front of the apartment */
+#divider {
+	stroke:black;
+	stroke-width: 0.5;
+}
+/* Gold pushbar for the glass doors of the apartment building */
+.pushbar {
+	width: 3px;
+	height: 25px;
+	fill: gold;
+}
+.shadow {
+	fill: rgb(105, 102, 85);
+}
+
+/* Tower */
+#tower {
+	animation: apartmentSlide 40s linear infinite;
+}
+#funkyTowerBase {
+	fill: #9c9c9c;
+}
+/* Small elevator pod that moves up and down in the shaft */
+#towerElevator {
+	width: 24px;
+	height: 40px;
+	fill: rgb(92, 34, 34);
+
+	animation: elevatorElevation 4s ease-in-out alternate infinite;
+}
+/* Elevator shaft with a glass front on it so we can see the elevator going up and down */
+#towerElevatorShaft {
+	width: 24px;
+	height: 175px;
+	fill: #426d816b;
+}
+/* Blinking light on the top of the tower */
+#towerLight {
+	fill: rgb(255, 97, 97);
+	width: 12px;
+	height: 25px;
+
+	animation: elevatorLightBlink 3s ease-in-out infinite;
+}
+/* Styling for the tower */
+#bandingRed {
+	width: 192px;
+	height: 20px;
+	fill: red;
+}
+#bandingGrey {
+	width: 192px;
+	height: 12px;
+	fill: rgb(235, 235, 235);
+}
+/* Front doors for the tower */
+#towerDoors {
+	fill: rgb(177, 194, 201);
+	width: 60px;
+	height: 35px;
+}
+#towerShadow {
+	fill: #7c7c7c;
+	width: 10px;
+	height: 40px;
+}
+
+/* Grass */
+#frontGrass {
+	height: 790px;
+	fill: rgb(149, 179, 100)
+}
+
+/* Road lane markings style */
+#dashedMarking {
+	fill: rgb(219, 219, 219);
+	width: 140px;
+	height: 30px;
+}
+#allMarkings {
+	animation: roadSlide .35s linear infinite;
+}
+#lastDash {
+	transform: translateX(2150px);
+}
+
+/* Tree */
+#treeBranches {
+	fill: rgb(50, 80, 50);
+}
+#wholeTree {
+	animation: treeSlide 5.2s linear infinite;
+}
+#treeTrunk {
+	fill: rgb(68, 33, 9);
+}
+
+/* Bush */
+#kushBush {
+	animation: bushSlide 6.0s linear infinite;
+}
+
+/* Guardrail parts */
+#post {
+	fill: rgb(109, 79, 54);
+	height: 120px;
+	width: 60px;
+}
+#lastPost {
+	transform: translateX(2100px);
+}
+#allPosts {
+	animation: postSlide 0.55s linear infinite;
+}
+#rail {
+	fill: silver;
+	height: 15px;
+	width: 2200px;
+	stroke: black;
+	stroke-width: 1;
+	transform: translateX(-100px);
+}
+
+/* Shared car styles */
+.handle {
+	width: 35px;
+	height: 15px;
+	fill: #101010;
+	fill-opacity: 0.4;
+}
+.window {
+	fill: rgba(119, 183, 209, 0.35);
+}
+.headlight {
+	fill: rgb(255, 242, 168);
+	opacity: 0.75;
+}
+.taillight {
+	width: 15px;
+	height: 30px;
+	fill: rgba(255, 0, 0, 1);
+	opacity: 0.75;
+}
+.carLights {
+	fill:rgba(255, 243, 174, 0.1);
+
+	animation: turnOnLights 120s linear infinite;
+}
+
+/* Close car styling */
+#carClose {
+	animation: carCloseMove 17s linear infinite;
+}
+#carCloseBody {
+	fill: rgb(94, 57, 57);
+}
+#carCloseBodyGrp {
+	animation: bodyBounce 0.75s 0.5s infinite alternate;
+}
+
+/* Far car styling */
+#carFar {
+	animation: carFarMove 15.5s linear infinite;
+}
+#carFarBody {
+	fill: rgb(199, 194, 122);
+}
+#carFarBodyGrp {
+	animation: bodyBounce 0.85s infinite alternate;
+}
+
+/* Mountain parts */
+#mountainLeft {
+	fill: rgb(194, 194, 194);
+}
+#mountainRight {
+	fill: rgb(168, 168, 168);
+}
+.snow {
+	fill: white;
+}
+#mountains {
+	animation: mountainSlide 45s linear infinite;
+}
+#mountainShadow {
+	fill: rgb(168, 168, 168);
+}
+
+/* Sun parts */
+#wholeSun {
+	animation: sunMove 120s linear reverse infinite;
+	transform-origin: 960px 1008px;
+}
+#sun {
+	fill: rgb(255, 255, 164);
+}
+.sunRay {
+	stroke: rgb(255, 255, 164);
+	stroke-width: 3;
+	stroke-linecap: round;
+}
+#sunRays {
+	transform-origin: 0 750px;
+	animation: raySpin 15s infinite linear;
+}
+
+/* Moon */
+#moon {
+	fill: rgb(255, 253, 227);
+	animation: sunMove 120s linear reverse infinite ;
+	animation: sunMove 120s linear 60s reverse infinite;
+	transform-origin: 960px 1008px;
+}
+
+
+/* ANIMATIONS */
+
+/* Car animations */
+@keyframes carCloseMove {
+	from {
+		transform: translateX(-950px);
+	}
+	to {
+		transform: translateX(15000px);
+	}
+}
+@keyframes carFarMove {
+	from {
+		transform: translate(-950px, -90px) scale(0.85);
+	}
+	to {
+		transform: translate(15000px, -90px);
+	}
+}
+@keyframes bodyBounce {
+	to {
+		transform: translateY(15px);
+	}
+}
+@keyframes turnOnLights {
+	0% {
+		opacity: 0;
+	}
+	41% {
+		opacity: 0;
+	}
+	41.2% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Road animation */
+@keyframes roadSlide {
+	to {
+		transform: translateX(-300px);
+	}
+}
+
+/* Guardrail posts animation */
+@keyframes postSlide {
+	to {
+		transform: translateX(-400px);
+	}
+}
+
+/* Mountains animation */
+@keyframes mountainSlide {
+	from {
+		transform: translate(2400px, -30px);
+	} to {
+		transform: translate(-600px, -30px);
+	}
+}
+
+/* Apartment animations */
+@keyframes apartmentSlide {
+	from {
+		transform: translateX(4000px);
+	} to {
+		transform: translateX(-2600px);
+	}
+}
+@keyframes apartmentLights {
+	0% {
+		fill: rgba(119, 183, 209, 0.35);
+	} 
+	74.9% {
+		fill: rgba(119, 183, 209, 0.35);
+	}
+	75% {
+		fill:rgba(255, 243, 174, 0.35);
+	}
+	99.9% {
+		fill:rgba(255, 243, 174, 0.35);
+	}
+	100% {
+		fill: rgba(119, 183, 209, 0.35);
+	}
+}
+
+/* Used for Sun AND moon */
+@keyframes sunMove {
+	from {
+		transform: rotate(360deg);
+	}
+} 
+
+/* Spins sunrays */
+@keyframes raySpin {
+	from {
+		transform: rotate(360deg);
+	}
+}
+
+/* Plane flight */
+@keyframes planeFlyX {
+	0% {
+		transform: translateX(-200px) scale(0.25);
+	} 
+	25% {
+		transform: translateX(1000px) scale(0.25);
+	}
+	50% {
+		transform: translateX(2000px) scale(0.25);
+	}
+	100% {
+		transform: translateX(4000px) scale(0.25);
+	}
+}
+@keyframes planeFlyY {
+	0% {
+		transform: translateY(60px);
+	} 
+	25% {
+		transform: translateY(-15px);
+	}
+	50% {
+		transform: translateY(60px);
+	}
+	100% {
+		transform: translateY(60px);
+	}
+}
+
+/* Tower animations */
+@keyframes elevatorElevation {
+	from {
+		transform: translateY(135px);
+	}
+}
+@keyframes elevatorLightBlink {
+	0% {
+		opacity: 0.1;
+	} 
+	98.5% {
+		opacity: 0.1;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+/* Vegetation animations */
+@keyframes bushSlide {
+	from {
+		transform: translate(2772px, 390px) scale(0.75);
+	} to {
+		transform: translate(-1540px, 390px) scale(0.75);
+	}
+}
+@keyframes treeSlide {
+	from {
+		transform: translate(2464px, -5px);
+	} to {
+		transform: translate(-1232px, -5px);
+	}
+}
+
+/* Sky colours */
+@keyframes bgColors {
+	0% {
+		fill:goldenrod;
+	} 
+	10% {
+		fill: skyblue;
+	} 
+	30% {
+		fill: skyblue;
+	}
+	38% {
+		fill: orangered;
+	} 
+	42% {
+		fill: rgb(20, 20, 54);
+	}
+	92% {
+		fill:rgb(20, 20, 54)
+	}
+	100% {
+		fill:goldenrod;
+	}
+}
