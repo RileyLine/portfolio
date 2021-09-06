@@ -1,0 +1,370 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+	padding: 20px 0;
+}
+
+.container h1 {
+	text-align: center;
+}
+
+.runningOrderHolder {
+	width: 650px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.runningOrderTop {
+	background-color: #4d4d4d;
+	width: 650px;
+	margin: 20px 0;
+	padding: 5px 0;
+	color: white;
+}
+
+.trackInfo {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+.infoNode p {
+	margin-right: 5px;
+}
+
+.infoNode p:nth-child(1) {
+	font-weight: bold;
+}
+
+.trackInfoEvent {
+	display: flex;
+	width: 100%;
+	justify-content: center;
+	margin: 0 0 5px 0;
+}
+
+.trackInfoEvent p {
+	text-decoration: underline;
+	font-size: 14pt;
+}
+.trackInfoName {
+	display: flex;
+	width: 50%;
+	justify-content: center;
+}
+.trackInfoLength {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+.trackInfoFlag {
+	display: flex;
+	width: 50%;
+	justify-content: center;
+	padding: 5px 0;
+	margin: 15px 0 0px 0;
+}
+.trackInfoCurrentLap {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+	padding: 5px 0;
+	margin: 15px 0 0 0;
+}
+.trackInfoLeaders {
+	display: flex;
+	justify-content: center;
+	padding: 5px 0;
+	margin: 0 0 5px 0;
+	width: 50%;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+.trackInfoLeadChanges {
+	display: flex;
+	justify-content: center;
+	padding: 5px 0;
+	margin: 0 0 5px 0;
+	width: 50%;
+	border-top: 1px solid grey;
+	border-bottom: 1px solid grey;
+}
+.trackInfoCautions {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+.trackInfoCautionLaps {
+	display: flex;
+	justify-content: center;
+	width: 50%;
+}
+
+.runningOrderBottom {
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	position: relative;
+}
+
+.legend {
+	display: flex;
+	width: 650px;
+	justify-content: space-between;
+	background: linear-gradient(to bottom, #4d4d4d 0%, #141414 100%);
+	background: #4d4d4d;
+	height: 40px;
+	font-size: 10pt;
+	text-transform: uppercase;
+	font-weight: bolder;
+	color: white;
+	border: 1px solid black;
+	border-bottom: none;
+	position: sticky;
+	top: 0;
+}
+
+.legStyle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-right: 1px solid black;
+}
+
+.legPos {
+	width: 60px;
+}
+
+.legStart {
+	width: 60px;
+}
+
+.legNum {
+	width: 80px;
+}
+
+.legManu {
+	width: 80px;
+}
+
+.legName {
+	width: 230px;
+}
+
+.legLed {
+	width: 60px;
+}
+
+.legBehind {
+	width: 80px;
+	border-right: none;
+}
+
+.driverEntry {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: #6B9998;
+	border: 1px solid black;
+	width: 650px;
+	height: 30px;
+	color: white;
+}
+
+.driverEntry:nth-child(odd) {
+	background-color: #486666;
+	border-top: none;
+	border-bottom: none;
+}
+
+.driverEntry:last-child {
+	border-bottom: 1px solid black;
+}
+
+.entryStyle {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: 10pt;
+	border-right: 1px solid black;
+	height: 100%;
+}
+
+.DERP {
+	width: 60px;
+	background-color: #e9c684;
+	color: #303030;
+	font-weight: bolder;
+}
+.DESP {
+	width: 60px;
+}
+.DEVN {
+	width: 80px;
+}
+.DEVM {
+	width: 80px;
+}
+.DEFN {
+	width: 230px;
+	text-transform: uppercase;
+}
+.DELL {
+	width: 60px
+}
+.DETB {
+	width: 80px;
+	border-right: none;
+}
+
+.standingsHolder {
+	width: 940px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	border: 1px solid black;
+	position: relative;
+}
+
+.standingsHolder:last-child {
+	border-bottom: none;
+}
+
+.standingsLegend {
+	display: flex;
+	border-bottom: 1px solid black;
+	background: linear-gradient(to bottom, #434343 0%, #141414 100%);
+	color: white;
+	justify-content: center;
+	align-items: center;
+	height: 50px;
+	position: sticky;
+	top: 0;
+}
+
+.standingsLegendStyle {
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-right: 1px solid #999999;
+}
+
+.legStandPos {
+	width: 40px;
+}
+.legStandName {
+	width: 240px;
+}
+.legStandManu {
+	width: 80px;
+}
+.legStandPoints {
+	width: 70px;
+}
+.legStandBehind {
+	width: 70px;
+}
+.legStandStarts {
+	width: 60px;
+}
+.legStandWins {
+	width: 60px;
+}
+.legStandTop5 {
+	width: 60px;
+}
+.legStandTop10 {
+	width: 60px;
+}
+.legStandDNF {
+	width: 60px;
+}
+.legStandLaps {
+	width: 70px;
+	text-align: center;
+}
+.legStandStageWins {
+	width: 70px;
+	border-right: none;
+	text-align: center;
+}
+
+#smallS {
+	text-transform: lowercase;
+}
+
+.standingsLegend p {
+	font-weight: bolder;
+	font-size: 8pt;
+	text-transform: uppercase;
+	padding: 0 2px;
+}
+
+.standingsEntry {
+	display: flex;
+	height: 30px;
+	border-bottom: 1px solid black;
+	background-color: #8898aa;
+	color: #eeeeee;
+}
+
+.standingsEntry:nth-child(odd) {
+	background-color: #627386;
+}
+
+#carNum {
+	color: #01020A;
+	font-weight: bolder;
+	font-style: italic;
+	padding-right: 1px;
+}
+
+.SEPos {
+	width: 40px;
+	background-color: #e9c684;
+	color: #303030;
+	font-weight: bolder;
+}
+.SEFN {
+	width: 240px;
+	text-transform: uppercase;
+}
+.SEVM {
+	width: 80px;
+}
+.SEPts {
+	width: 70px;
+}
+.SEPB {
+	width: 70px;
+}
+.SEStrts {
+	width: 60px;
+}
+.SEWins {
+	width: 60px;
+}
+.SETF {
+	width: 60px;
+}
+.SETT {
+	width: 60px;
+}
+.SEDNF {
+	width: 60px;
+}
+.SELL {
+	width: 70px;
+}
+.SESW {
+	width: 70px;
+	border-right: none;
+}

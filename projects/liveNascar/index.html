@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles/main.css">
+	<title>NASCAR Live Update</title>
+</head>
+<body>
+	<div class="container">
+		<h1 id="seriesTitle"></h1>
+		<div class="runningOrderHolder">
+			<div class="runningOrderTop">
+				<div class="trackInfo">
+					<div class="trackInfoEvent"></div>
+					<div class="trackInfoName infoNode"></div>
+					<div class="trackInfoLength infoNode"></div>
+					<div id="test" class="trackInfoFlag infoNode"></div>
+					<div class="trackInfoCurrentLap infoNode"></div>
+					<div class="trackInfoLeadChanges infoNode"></div>
+					<div class="trackInfoLeaders infoNode"></div>
+					<div class="trackInfoCautions infoNode"></div>
+					<div class="trackInfoCautionLaps infoNode"></div>
+				</div>
+			</div>
+			<div class="runningOrderBottom">
+				<div class="legend">
+					<div class="legPos legStyle"><p>Pos</p></div>
+					<div class="legStart legStyle"><p>Start</p></div>
+					<div class="legNum legStyle"><p>Num</p></div>
+					<div class="legManu legStyle"><p>Mfr</p></div>
+					<div class="legName legStyle"><p>Driver</p></div>
+					<div class="legLed legStyle"><p>Led</p></div>
+					<div class="legBehind legStyle"><p>Back</p></div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<audio id="blip" src="blip.mp3" preload="auto"></audio>
+
+	<script defer src="js/script.js"></script>
+</body>
+</html>
