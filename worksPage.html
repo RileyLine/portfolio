@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Riley Line | Projects</title>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+		integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+	<div class="container">
+		<main class="worksMain">
+			<div class="backHome">
+				<i class="fas fa-home"></i>
+			</div>
+			<div class="webWorks worksSection">
+				<h2>Web Projects</h2>
+				<div class="featuredProjects">
+					<p id="previewText">Preview my recent web projects.</p>
+					<div class="photoGallery">
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">Apex Legends - Parallaxing</p>
+							</div> -->
+							<img class="previewImg apexProject" src="./images/thumbnails/thumbnailApex.jpg" alt="">
+						</div>
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">Team Astralis</p>
+							</div> -->
+							<img class="previewImg astralisProject" src="./images/thumbnails/thumbnailAstralis.jpg" alt="">
+						</div>
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">CS:GO Responsive</p>
+							</div> -->
+							<img class="previewImg csgoProject" src="./images/thumbnails/thumbnailCSGO.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- <div class="seeMore">
+					<i id="leftArrowWeb" class="fas fa-angle-double-left"></i>
+					<p>VIEW MORE WEB PROJECTS</p>
+					<i id="rightArrowWeb" class="fas fa-angle-double-right"></i>
+				</div> -->
+			</div>
+			<div class="designWorks worksSection">
+				<h2>Design Projects</h2>
+				<div class="featuredProjects">
+					<p id="previewText">Preview my recent design projects.</p>
+					<div class="photoGallery">
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">PHFF - Brand Book</p>
+							</div> -->
+							<img class="previewImg brandBookProject" src="./images/thumbnails/thumbnailPHFFBB.jpg" alt="">
+						</div>
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">PHFF - Website Redesign</p>
+							</div> -->
+							<img class="previewImg fairWebProject" src="./images/thumbnails/thumbnailPHFFWebsite.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- <div class="seeMore">
+					<i id="leftArrowDesign" class="fas fa-angle-double-left"></i>
+					<p>VIEW MORE DESIGN PROJECTS</p>
+					<i id="rightArrowDesign" class="fas fa-angle-double-right"></i>
+				</div> -->
+			</div>
+			<div class="animationWorks worksSection">
+				<h2>Animation Projects</h2>
+				<div class="featuredProjects">
+					<p id="previewText">Preview my recent animation projects.</p>
+					<div class="photoGallery">
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">Customizable Clock App</p>
+							</div> -->
+							<img class="previewImg animatedClockProject" src="./images/thumbnails/thumbnailAnimClock.jpg" alt="">
+						</div>
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">SVG/CSS Animation</p>
+							</div> -->
+							<img class="previewImg animationP1" src="./images/thumbnails/thumbnailAnimP1.jpg" alt="">
+						</div>
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">Animated Emojis</p>
+							</div> -->
+							<img class="previewImg animationP2" src="./images/thumbnails/thumbnailAnimP2.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- <div class="seeMore">
+					<i id="leftArrowAnimation" class="fas fa-angle-double-left"></i>
+					<p>VIEW MORE WEB PROJECTS</p>
+					<i id="rightArrowAnimation" class="fas fa-angle-double-right"></i>
+				</div> -->
+			</div>
+			<div class="otherWorks worksSection">
+				<h2>Ongoing Projects</h2>
+				<div class="featuredProjects">
+					<p id="previewText">Preview my ongoing projects.</p>
+					<div class="photoGallery">
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">RPG Browser Game</p>
+							</div> -->
+							<img class="previewImg gameProject" src="./images/thumbnails/thumbnailGameProject.jpg" alt="">
+						</div>
+						<div class="photoHolder">
+							<!-- <div class="photoOverlay">
+								<p class="photoCaption">Live NASCAR Feed</p>
+							</div> -->
+							<img class="previewImg nascarProject" src="./images/thumbnails/thumbnailNascarProject.jpg" alt="">
+						</div>
+					</div>
+				</div>
+				<!-- <div class="seeMore">
+					<i id="leftArrowPhoto" class="fas fa-angle-double-left"></i>
+					<p>VIEW MORE WEB PROJECTS</p>
+					<i id="rightArrowPhoto" class="fas fa-angle-double-right"></i>
+				</div> -->
+			</div>
+
+			<div class="selectedProjectHolder">
+				<div class="selectedProjectTitleHolder">
+					<div class="closeBtn">X</div>
+					<h2 id="selectedProjectTitle"></h2>
+				</div>
+				<div class="selectedProjectContentHolder">
+					<div class="selectedProjectInfoHolder">
+						<div class="aboutProject">
+							<h3 class="infoHolderHeading">About Project</h3>
+							<p class="infoHolderText" id="selectedProjectAbout"></p>
+						</div>
+						<div class="techUsed">
+							<h3 class="infoHolderHeading">Project Specs</h3>
+							<p class="infoHolderText" id="selectedProjectTech"></p>
+						</div>
+					</div>
+					<div class="selectedProjectGalleryHolder">
+						<h3>Gallery</h3>
+						<div class="slideshowContainer">
+							<div class="previewProject">
+								<a id="selectedProjectLink" target="_blank" href="#">Visit</a>
+							</div>
+							<div class="prevImg"><i class="fas fa-caret-left"></i></div>
+							<div class="nextImg"><i class="fas fa-caret-right"></i></div>
+							<div class="gallerySlide">
+								<img id="slideImg" src="" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+	<script src="./js/webWorks.js"></script>
+</body>
+</html>
