@@ -60,7 +60,7 @@ let brandBookProject = {
 	about: "A brand book is a series of rules that a designer must follow when creating materials for a business. This brand book is a complete ruleset developed for The Port Hope Fall Fair. Some of the contents of the book include: <ul><li>Logo (rules, mis/uses, positioning)</li><li>Colour Palette</li><li>Type Selection</li></ul>",
 	tech: "Assets developed using Adobe Photoshop and Adobe Illustrator. Project assembled with Illustrator.",
 	images: ["./images/phffbbProjectImages/fullsizePHFFBB.jpg", "./images/phffbbProjectImages/fullsizePHFFBB2.jpg", "./images/phffbbProjectImages/fullsizePHFFBB3.jpg", "./images/phffbbProjectImages/fullsizePHFFBB4.jpg", "./images/phffbbProjectImages/fullsizePHFFBB5.jpg", "./images/phffbbProjectImages/fullsizePHFFBB6.jpg", "./images/phffbbProjectImages/fullsizePHFFBB7.jpg"],
-	url: "./projects/PHFF-Brandbook/PHFFBrandbook.pdf"
+	url: "./projects/PHFF-Brandbook/PHFFBrandBook.pdf"
 }
 
 // Port Hope Fall Fair Website
