@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+		integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="main.css">
+</head>
+<body>
+
+	<div class="gameDisplay">
+		<div class="loadingScreen">
+			<h1>SWORD and STAF<span id="spacingFix">F</span></h1>
+			<img id="loadingImg" src="./images/shield.png" alt="">
+			<svg id="loading" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="600" height="50" viewBox="0 0 600 50">
+				<g id="loading_bar">
+					<rect id="progress" x="2.97" y="2.97" width="594.05" height="44.05" fill="#460000" />
+					<path id="border" d="M594.05,6v38.1H6V6h588.1M600,0H0V50H600V0Z" fill="#8c6239" />
+				</g>
+				<g id="letters">
+					<path id="letter_l"
+						d="M236.5,33a21,21,0,0,0-4.33.5c.17-1.18.29-2.41.38-3.72s.12-2.69.12-4.16q0-3.09-.12-5.19a29.7,29.7,0,0,0-.31-3.2l-.07-.4a6.08,6.08,0,0,0,1.42-.33,11.24,11.24,0,0,0,1.53-.71,52.35,52.35,0,0,0-.53,8.06v.41a47.58,47.58,0,0,0,.4,7.54,2,2,0,0,0,.55.09,14.63,14.63,0,0,0,6.68-1.35,7.13,7.13,0,0,0-.46,1.16,8.73,8.73,0,0,0-.32,1.8l-.31-.1A18.17,18.17,0,0,0,236.5,33Z"
+						fill="#eee" />
+					<path id="letter_o"
+						d="M252.25,33.47a10.36,10.36,0,0,1-2.11-.92,9.63,9.63,0,0,1-2.23-1.7A7.67,7.67,0,0,1,246.07,28a9.82,9.82,0,0,1-.63-3.28v-.06a9.12,9.12,0,0,1,.73-3.46,8.48,8.48,0,0,1,1.47-2.42,7.08,7.08,0,0,1,1.45-1.35l2.6-1.68a11.46,11.46,0,0,1,2.12.95,10.53,10.53,0,0,1,2.22,1.7,7.47,7.47,0,0,1,1.86,3,10.63,10.63,0,0,1,.61,3.25v.07a8.62,8.62,0,0,1-.66,3.42,7.45,7.45,0,0,1-1.51,2.35,17.38,17.38,0,0,1-1.47,1.39Zm-3-16.06c-.67.39-1.18,1.43-1.55,3.12a13.84,13.84,0,0,0-.35,3,8.61,8.61,0,0,0,.07,1.16,9,9,0,0,0,1.1,3.17,7.11,7.11,0,0,0,2.58,2.56,10.2,10.2,0,0,0,3.63,1.38h0c.73-.41,1.26-1.5,1.6-3.28a15.49,15.49,0,0,0,.29-2.8,9.28,9.28,0,0,0-.07-1.19,8.91,8.91,0,0,0-1.1-3.17,6.62,6.62,0,0,0-2.51-2.5A13.26,13.26,0,0,0,249.23,17.41Z"
+						fill="#eee" />
+					<path id="letter_a"
+						d="M277.25,32.39a8.81,8.81,0,0,0-.92.17,7.36,7.36,0,0,0-.83.27,5.61,5.61,0,0,0-.69.32,2.83,2.83,0,0,0-.51.32c-.12-.48-.33-1.19-.61-2.14s-.64-2.13-1.09-3.56q-.63-.06-1.26-.09c-.42,0-.84,0-1.28,0h-.61a21,21,0,0,0-3.3.21l-.12,0c-.44,1.23-.77,2.21-1,2.94a6.74,6.74,0,0,0-.34,1.45v.15a4.8,4.8,0,0,0-2.39,1c.54-1.09,1.11-2.32,1.71-3.7s1.24-2.93,1.92-4.65a36.16,36.16,0,0,0,2.29-7.87l0-.47a7.6,7.6,0,0,0,3-1,37.59,37.59,0,0,0,2.38,8.88Q275.76,30.48,277.25,32.39Zm-5-5.79-.5-1.61c-.54-1.69-1-3-1.36-4a7.86,7.86,0,0,0-.86-1.8,43.51,43.51,0,0,0-2.51,6l-.51,1.39c.4,0,.82.07,1.26.09s.91,0,1.4,0h.24C270.57,26.7,271.51,26.67,272.24,26.6Z"
+						fill="#eee" />
+					<path id="letter_d"
+						d="M282,33.47c.17-1.21.3-2.33.38-3.39s.13-2,.13-2.95,0-2.1-.13-3.11-.2-2-.31-2.93l-.07-.4a6.08,6.08,0,0,0,1.42-.33,11.24,11.24,0,0,0,1.53-.71c-.18,1.16-.31,2.22-.4,3.17s-.14,1.81-.14,2.57v.53c.09,1.76.16,3.14.22,4.11s.11,1.58.15,1.8l.55.26a5.21,5.21,0,0,0,1.77.33,4.3,4.3,0,0,0,3.4-1.67,15,15,0,0,0,.94-1.51,9.32,9.32,0,0,0,.63-1.43,7.93,7.93,0,0,0,.34-1.44,11.15,11.15,0,0,0,.1-1.58,9.68,9.68,0,0,0-.13-1.67,6.16,6.16,0,0,0-.42-1.4,5.58,5.58,0,0,0-.71-1.2,7.27,7.27,0,0,0-1-1.07,6.11,6.11,0,0,0-1.77-1,6.45,6.45,0,0,0-2.36-.4,6,6,0,0,0-1.29.15,9.55,9.55,0,0,0-1.39.42,10.43,10.43,0,0,0-1.4.66,10.63,10.63,0,0,0-1.31.87l.79-3.07,1.89-.75c.59-.17,1.13-.31,1.63-.41a7.86,7.86,0,0,1,1.37-.14,7.52,7.52,0,0,1,1.11.09,6.46,6.46,0,0,1,1.28.32,8.08,8.08,0,0,1,1.43.65,12.06,12.06,0,0,1,1.56,1.09,6.33,6.33,0,0,1,1,1.13,7.68,7.68,0,0,1,.85,1.56,10.28,10.28,0,0,1,.59,1.94,11.61,11.61,0,0,1,.22,2.28,9.88,9.88,0,0,1-.27,2.37,10.21,10.21,0,0,1-.68,2,8.21,8.21,0,0,1-1,1.59,7.35,7.35,0,0,1-3,2.3,5.75,5.75,0,0,1-2,.4l-2.53-1.08a6.62,6.62,0,0,0-1.05.19,4.65,4.65,0,0,0-.8.28,4.47,4.47,0,0,0-.62.31Z"
+						fill="#eee" />
+					<path id="letter_i"
+						d="M300,33.47a55.29,55.29,0,0,0,.51-7.88c0-.43,0-.85,0-1.26A58.69,58.69,0,0,0,300,17.2l-.07-.4a7.46,7.46,0,0,0,2.87-1l.09-.05a51.47,51.47,0,0,0-.53,8.06v.41a45.45,45.45,0,0,0,.43,7.74l.1.42a5.78,5.78,0,0,0-1.43.33A6.38,6.38,0,0,0,300,33.47Z"
+						fill="#eee" />
+					<path id="letter_n"
+						d="M308.29,17l-.15-.18a6.29,6.29,0,0,0,2.95-1,31.05,31.05,0,0,0,1.37,3.81,37.78,37.78,0,0,0,1.84,3.72c.69,1.22,1.42,2.42,2.18,3.6s1.57,2.31,2.4,3.4c.1-1.57.15-3.2.15-4.9V25c0-1.9,0-3.48-.07-4.75s-.11-2.27-.2-3l-.06-.45a2.41,2.41,0,0,0,.59-.17,3.38,3.38,0,0,0,.5-.27,5.6,5.6,0,0,0,.67-.61c-.11,1.12-.18,2.33-.23,3.62s-.07,2.7-.07,4.22q0,2.8.06,4.89c0,1.39.11,2.55.2,3.5l.05.4a9,9,0,0,0-.93.17,8.09,8.09,0,0,0-.83.27,5.61,5.61,0,0,0-.69.32,3.24,3.24,0,0,0-.51.32q-.27-1.44-4.43-8.75l-2.28-3.91c0,.82,0,1.71,0,2.66,0,1.94,0,3.61.06,5s.11,2.59.2,3.53l.05.4a3.66,3.66,0,0,0-1.76,1q.31-3.49.32-8.1V25c0-1.32,0-2.51,0-3.56s-.06-2-.12-2.81q-.37-.6-.66-1A5.64,5.64,0,0,0,308.29,17Z"
+						fill="#eee" />
+					<path id="letter_g"
+						d="M335.38,31.81q.12-.79.18-1.5c0-.48.06-.92.06-1.34v-.33c0-.6-.05-1.16-.11-1.71a8.37,8.37,0,0,0-.33-1.58l-.08-.27a7.46,7.46,0,0,0,1.42-.33,8.65,8.65,0,0,0,1.53-.72,10.88,10.88,0,0,0-.75,4.27v.29a8.31,8.31,0,0,0,.62,3.5l.12.3a7,7,0,0,0-1,.18,8.26,8.26,0,0,0-.84.28,7.09,7.09,0,0,0-.67.32,2.62,2.62,0,0,0-.49.3l.15-.82c.05-.27.09-.53.13-.78l-2.53,1.6a7.28,7.28,0,0,1-1-.36,9.45,9.45,0,0,1-1.14-.58c-.39-.24-.79-.51-1.2-.82a9.15,9.15,0,0,1-1.14-1,8.66,8.66,0,0,1-1-1.26,6.4,6.4,0,0,1-.72-1.46,10.24,10.24,0,0,1-.63-3.34,7.85,7.85,0,0,1,.28-2.06,9.73,9.73,0,0,1,.76-2,9.44,9.44,0,0,1,1.15-1.79,7.32,7.32,0,0,1,1.45-1.35l2.61-1.68c.21.06.47.16.78.28a10.59,10.59,0,0,1,1,.5,11,11,0,0,1,1.22.77,9.75,9.75,0,0,1,1.3,1.1,7.85,7.85,0,0,1,.67.77L335,20.28a8.48,8.48,0,0,0-1.08-1.14,6.39,6.39,0,0,0-1.17-.8,7.9,7.9,0,0,0-1.33-.55,11.89,11.89,0,0,0-1.56-.38h0c-.67.39-1.18,1.43-1.53,3.11a14.61,14.61,0,0,0-.35,3,10.06,10.06,0,0,0,.17,1.76,7.5,7.5,0,0,0,.61,1.82,7.65,7.65,0,0,0,1.14,1.74,7.81,7.81,0,0,0,1.83,1.54A9.71,9.71,0,0,0,335.38,31.81Z"
+						fill="#eee" />
+					<path id="period1"
+						d="M344,34.24a8.81,8.81,0,0,0,.22-2c0-.21,0-.42,0-.63a5.81,5.81,0,0,0-.13-.88,7.83,7.83,0,0,0,3.14-1.09,7.69,7.69,0,0,0-.19,1.91q0,.33,0,.72c0,.26.05.55.09.86a6.15,6.15,0,0,0-.95.19,7.31,7.31,0,0,0-.9.28,6.5,6.5,0,0,0-.75.33A5.37,5.37,0,0,0,344,34.24Z"
+						fill="#eee" />
+					<path id="period2"
+						d="M353.1,34.24a8.81,8.81,0,0,0,.22-2c0-.21,0-.42,0-.63a5.81,5.81,0,0,0-.13-.88,7.88,7.88,0,0,0,3.14-1.09,7.24,7.24,0,0,0-.19,1.91q0,.33,0,.72c0,.26.05.55.09.86a6.52,6.52,0,0,0-1,.19,7.72,7.72,0,0,0-.89.28,5.27,5.27,0,0,0-.75.33A5.37,5.37,0,0,0,353.1,34.24Z"
+						fill="#eee" />
+					<path id="period3"
+						d="M362.22,34.24a8.8,8.8,0,0,0,.23-2c0-.21,0-.42,0-.63a6.11,6.11,0,0,0-.14-.88,7.78,7.78,0,0,0,3.14-1.09,7.78,7.78,0,0,0-.18,1.91q0,.33,0,.72c0,.26,0,.55.08.86a6.15,6.15,0,0,0-.95.19,6.65,6.65,0,0,0-.89.28,5.27,5.27,0,0,0-.75.33A4.66,4.66,0,0,0,362.22,34.24Z"
+						fill="#eee" />
+				</g>
+			</svg>
+		</div>
+		<div class="chooseClass">
+			<div class="warriorArea classArea">
+				<div class="picArea">
+					<img src="./images/warrior.png" alt="">
+				</div>
+				<div class="descArea">
+					<h3>WARRIOR</h3>
+					<p>The Warrior excels at defense, with large amounts of health and access to powerful suits of armor. These strengths
+					help keep the Warrior protected when engaged in close-quarters combat against hordes of monsters.</p>
+				</div>
+			</div>
+			<div class="promptArea">
+				<h2>CHOOSE YOUR CLASS</h2>
+			</div>
+			<div class="mageArea classArea">
+				<div class="picArea">
+					<img src="./images/mage.png" alt="">
+				</div>
+				<div class="descArea">
+					<h3>MAGICIAN</h3>
+					<p>The Magician may look fragile, but this powerful magic-user can obliterate enemies from afar with devastating spells.
+					The Magician can cast elemental or supportive skills from a distance while characters
+					stronger in melee combat engage monsters up close.</p>
+				</div>
+			</div>
+		</div>
+		<div class="gameScreen">
+			<!-- Leave empty, game will be created by JS within this div -->
+		</div>
+		<div class="gameIO">
+			<div class="gameLog">
+				<div class="gameLogHeading">
+					<h2>Game Log</h2>
+				</div>
+				<p>testeing</p>
+				<p>testeing</p>
+				<p>testeing</p>
+				<p>testeing</p>
+			</div>
+			<div class="userInfo">
+				<div class="userCharArea">
+					<img id="userAvatar" src="images/warriorHead.png" alt="">
+				</div>
+				<div class="userQuickStats">
+					<h3 id="userClassname">Warrior</h3>
+					<div class="hpArea">
+						<p>HP</p>
+						<progress id="health" value="100" max="100"></progress>
+					</div>
+					<div class="bigThreeStats">
+						<div class="coinsArea big3">
+							<p id="coinsTT" class="toolTip">Coins</p>
+							<i id="coinsIcon" class="fas fa-coins"></i>
+							<p id="coins">17</p>
+						</div>
+						<div class="levelArea big3">
+							<p id="levelTT" class="toolTip">Level</p>
+							<i id="levelIcon" class="far fa-arrow-alt-circle-up"></i>
+							<p id="level">45</p>
+						</div>
+						<div class="expArea big3">
+							<p id="expTT" class="toolTip">Experience</p>
+							<i id="expIcon" class="fas fa-star"></i>
+							<p id="exp">97</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="userInputArea">
+				<div class="buttonArea">
+					<button id="attack">Attack</button>
+				</div>
+				<div class="movementArea">
+					<i id="up" class="fas fa-caret-square-up"></i>
+					<i id="left" class="fas fa-caret-square-left"></i>
+					<i id="right" class="fas fa-caret-square-right"></i>
+					<i id="down" class="fas fa-caret-square-down"></i>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
+	<script src="animations.js"></script>
+
+	<script src="interface.js"></script>
+	<script src="gameMaps.js"></script>
+	<script src="loadMap.js"></script>
+	<script src="mapInit.js"></script>
+	<script src="player.js"></script>
+	<script src="enemy.js"></script>
+	<script src="logUpdate.js"></script>
+	<script src="attack.js"></script>
+	
+	
+	<script src="control.js"></script>
+	<script src="init.js"></script>
+
+</body>
+</html>
